@@ -1,5 +1,5 @@
 <DERExt>
- <Entity name="Especialidad" x="-1191" isAssociative="0" y="398" subtype="0" width="80">
+ <Entity name="Especialidad" x="-1205" isAssociative="0" y="479" subtype="0" width="80">
   <Simple type="integer" name="ID" optionSQL="1" pk="1" cant3="2" null="0" cant1="20" parent="" mult="0" sk="0" cant2="0"/>
   <Simple type="integer" name="Nombre" optionSQL="1" pk="0" cant3="2" null="0" cant1="20" parent="" mult="0" sk="0" cant2="0"/>
   <Simple type="integer" name="Descripcion" optionSQL="1" pk="0" cant3="2" null="0" cant1="20" parent="" mult="0" sk="0" cant2="0"/>
@@ -20,10 +20,10 @@
  <Entity name="Profesional" x="-1187" isAssociative="0" y="242" subtype="1" width="75">
   <Simple type="integer" name="Matricula" optionSQL="1" pk="0" cant3="2" null="0" cant1="20" parent="" mult="0" sk="1" cant2="0"/>
  </Entity>
- <Entity name="Salud" x="-553" isAssociative="0" y="245" subtype="1" width="45"/>
- <Entity name="Gestión" x="-791" isAssociative="0" y="243" subtype="1" width="55"/>
- <Entity name="Mantenimiento" x="-949" isAssociative="0" y="248" subtype="1" width="85"/>
- <RBinary name="tiene" min1="1" x="-1158" match0="simple" max0="1" onUpdate1="restrict" onDelete1="restrict" min0="0" rolename="" width="40" name1="Especialidad" firstWeak="0" onUpdate0="restrict" max1="N" name0="Profesional" y="349" onDelete0="restrict" dep="0" match1="simple"/>
+ <Entity name="Salud" x="-561" isAssociative="0" y="243" subtype="1" width="45"/>
+ <Entity name="Gestión" x="-785" isAssociative="0" y="242" subtype="1" width="55"/>
+ <Entity name="Mantenimiento" x="-965" isAssociative="0" y="243" subtype="1" width="85"/>
+ <RBinary name="practica" min1="1" x="-1163" match0="simple" max0="N" onUpdate1="restrict" onDelete1="restrict" min0="0" rolename="" width="50" name1="Especialidad" firstWeak="0" onUpdate0="restrict" max1="N" name0="Profesional" y="380" onDelete0="restrict" dep="0" match1="simple"/>
  <RBinary name="Trabaja" min1="1" x="-811" match0="simple" max0="N" onUpdate1="restrict" onDelete1="restrict" min0="1" rolename="" width="40" name1="Clinica" firstWeak="1" onUpdate0="restrict" max1="1" name0="Personal" y="-124" onDelete0="restrict" dep="1" match1="simple"/>
  <Hierarchy name4="Profesional" name="Hierarchy Personal" cont="5" centerX="null" name1="Mantenimiento" typeName="" total="true" name0="Personal" exclusive="true" centerY="null" name2="Gestión" name3="Salud"/>
 </DERExt>
