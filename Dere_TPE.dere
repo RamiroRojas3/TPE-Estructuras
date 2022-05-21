@@ -1,29 +1,32 @@
 <DERExt>
- <Entity name="Personal" strongEnt="Clinica" weak="1" x="-893" y="5" width="60">
-  <Simple cant1="20" name="CUIL" type="integer" pk="1" mult="0" parent="" null="0" sk="0" cant3="2" optionSQL="1" cant2="0"/>
-  <Simple cant1="20" name="Nombre" type="integer" pk="0" mult="0" parent="" null="0" sk="0" cant3="2" optionSQL="1" cant2="0"/>
-  <Simple cant1="20" name="Apellido" type="integer" pk="0" mult="0" parent="" null="0" sk="0" cant3="2" optionSQL="1" cant2="0"/>
-  <Simple cant1="20" name="Telefono" type="integer" pk="0" mult="0" parent="" null="0" sk="0" cant3="2" optionSQL="1" cant2="0"/>
-  <Simple cant1="20" name="Correo_Electronico" type="integer" pk="0" mult="0" parent="" null="0" sk="0" cant3="2" optionSQL="1" cant2="0"/>
+ <Entity width="104" name="Especialidad" subtype="0" x="-1113" y="763" isAssociative="0">
+  <Simple mult="0" name="ID" null="0" cant1="20" cant3="2" cant2="0" parent="" sk="0" optionSQL="1" pk="1" type="integer"/>
+  <Simple mult="0" name="Nombre" null="0" cant1="20" cant3="2" cant2="0" parent="" sk="0" optionSQL="1" pk="0" type="integer"/>
+  <Simple mult="0" name="Descripcion" null="0" cant1="20" cant3="2" cant2="0" parent="" sk="0" optionSQL="1" pk="0" type="integer"/>
  </Entity>
- <Entity name="Mantenimiento" isAssociative="0" subtype="1" x="-965" y="243" width="85"/>
- <Entity name="Gestion" isAssociative="0" subtype="1" x="-785" y="242" width="55"/>
- <Entity name="Salud" isAssociative="0" subtype="1" x="-561" y="243" width="45"/>
- <Entity name="Profesional" isAssociative="0" subtype="1" x="-1187" y="242" width="75">
-  <Simple cant1="20" name="Matricula" type="integer" pk="0" mult="0" parent="" null="0" sk="1" cant3="2" optionSQL="1" cant2="0"/>
- </Entity>
- <Entity name="Clinica" isAssociative="0" subtype="0" x="-774" y="-253" width="55">
-  <Compound name="Id_Clinica" pk="1" mult="0" parent="" null="0" sk="0" amount="2" optionSQL="1">
-   <Simple cant1="20" name="Codigo_Clinica" type="integer" pk="0" mult="0" parent="Id_Clinica" null="0" sk="0" cant3="2" optionSQL="1" cant2="0"/>
-   <Simple cant1="20" name="Codigo_Postal" type="integer" pk="0" mult="0" parent="Id_Clinica" null="0" sk="0" cant3="2" optionSQL="1" cant2="0"/>
+ <Entity width="55" name="Clinica" subtype="0" x="-722" y="100" isAssociative="0">
+  <Compound mult="0" name="Id_Clinica" null="0" parent="" sk="0" amount="2" optionSQL="1" pk="1">
+   <Simple mult="0" name="Codigo_Clinica" null="0" cant1="20" cant3="2" cant2="0" parent="Id_Clinica" sk="0" optionSQL="1" pk="0" type="integer"/>
+   <Simple mult="0" name="Codigo_Postal" null="0" cant1="20" cant3="2" cant2="0" parent="Id_Clinica" sk="0" optionSQL="1" pk="0" type="integer"/>
   </Compound>
  </Entity>
- <Entity name="Especialidad" isAssociative="0" subtype="0" x="-1205" y="479" width="80">
-  <Simple cant1="20" name="ID" type="integer" pk="1" mult="0" parent="" null="0" sk="0" cant3="2" optionSQL="1" cant2="0"/>
-  <Simple cant1="20" name="Nombre" type="integer" pk="0" mult="0" parent="" null="0" sk="0" cant3="2" optionSQL="1" cant2="0"/>
-  <Simple cant1="20" name="Descripcion" type="integer" pk="0" mult="0" parent="" null="0" sk="0" cant3="2" optionSQL="1" cant2="0"/>
+ <Entity width="111" name="Profesional" subtype="1" x="-1087" y="574" isAssociative="0">
+  <Simple mult="0" name="Matricula" null="0" cant1="20" cant3="2" cant2="0" parent="" sk="1" optionSQL="1" pk="0" type="integer"/>
  </Entity>
- <Hierarchy exclusive="true" name0="Personal" name3="Salud" name="Hierarchy Personal" name4="Profesional" centerY="null" name1="Mantenimiento" centerX="null" cont="5" typeName="" total="true" name2="Gestion"/>
- <RBinary firstWeak="1" onDelete0="restrict" y="-124" min0="1" max0="N" onDelete1="restrict" x="-811" name0="Personal" name1="Clinica" min1="1" onUpdate0="restrict" max1="1" width="40" onUpdate1="restrict" name="Trabaja" dep="1" rolename="" match1="simple" match0="simple"/>
- <RBinary firstWeak="0" onDelete0="restrict" y="380" min0="0" max0="N" onDelete1="restrict" x="-1163" name0="Profesional" name1="Especialidad" min1="1" onUpdate0="restrict" max1="N" width="50" onUpdate1="restrict" name="practica" dep="0" rolename="" match1="simple" match0="simple"/>
+ <Entity width="83" name="Salud" subtype="1" x="-536" y="574" isAssociative="0"/>
+ <Entity width="79" name="Gestion" subtype="1" x="-703" y="588" isAssociative="0"/>
+ <Entity width="108" name="Mantenimiento" subtype="1" x="-858" y="578" isAssociative="0"/>
+ <Entity width="134" name="Personal" subtype="0" x="-1077" y="290" isAssociative="0">
+  <Simple mult="0" name="CUIL" null="0" cant1="20" cant3="2" cant2="0" parent="" sk="0" optionSQL="1" pk="1" type="integer"/>
+  <Simple mult="0" name="Nombre" null="0" cant1="20" cant3="2" cant2="0" parent="" sk="0" optionSQL="1" pk="0" type="integer"/>
+  <Simple mult="0" name="Apellido" null="0" cant1="20" cant3="2" cant2="0" parent="" sk="0" optionSQL="1" pk="0" type="integer"/>
+  <Simple mult="0" name="Telefono" null="0" cant1="20" cant3="2" cant2="0" parent="" sk="0" optionSQL="1" pk="0" type="integer"/>
+  <Simple mult="0" name="Correo_Electronico" null="0" cant1="20" cant3="2" cant2="0" parent="" sk="0" optionSQL="1" pk="0" type="integer"/>
+ </Entity>
+ <Entity width="294" name="trabajo" subtype="0" associationRel="trabaja" x="-732" y="70" isAssociative="1">
+  <Simple mult="0" name="trabaja.Id_Clinica(Codigo_Clinica,trabaja.,trabaja.CUIL" null="0" cant1="20" cant3="2" cant2="0" parent="" sk="0" optionSQL="1" pk="1" type="integer"/>
+ </Entity>
+ <RBinary name1="Salud" max1="N" min0="1" name="trabaja" firstWeak="0" width="62" onDelete0="restrict" match0="simple" max0="N" min1="1" x="-502" y="368" name0="Clinica" dep="0" onUpdate0="restrict" rolename="" onUpdate1="restrict" match1="simple" onDelete1="restrict"/>
+ <Hierarchy centerX="-872" typeName="" name="Hierarchy Personal" centerY="513" name1="Mantenimiento" name0="Personal" name4="Profesional" exclusive="true" cont="5" name3="Salud" total="true" name2="Gestion"/>
+ <RBinary name1="Especialidad" max1="N" min0="0" name="practica" firstWeak="0" width="77" onDelete0="restrict" match0="simple" max0="N" min1="1" x="-1077" y="687" name0="Profesional" dep="0" onUpdate0="restrict" rolename="" onUpdate1="restrict" match1="simple" onDelete1="restrict"/>
 </DERExt>
