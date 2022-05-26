@@ -1,0 +1,3 @@
+una clinica existe sin personal (pero no funciona) pero el personal no existe sin la clinica por eso las entidades son fuerte y debil
+ID_personal
+TRABAJA AHORA RELACIONA DOS ENTIDADES NUEVAS
