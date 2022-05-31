@@ -1,0 +1,2 @@
+"Las clínicas se identifican por un código que está compuesto también por el código postal de la ciudad":
+1) Lo modelamos como una entidad
