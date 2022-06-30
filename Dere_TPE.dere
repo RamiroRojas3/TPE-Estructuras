@@ -1,78 +1,78 @@
 <DERExt>
- <Entity x="-331" subtype="1" name="Personal_Variable" y="-244" width="145" isAssociative="0">
-  <Simple cant1="20" type="integer" pk="0" name="Id_personal_variable" mult="0" parent="" cant2="0" null="0" sk="1" cant3="2" optionSQL="1"/>
+ <Entity name="Atencion" width="79" y="345" x="-1145" subtype="0" isAssociative="0">
+  <Simple name="ID_Consulta" null="0" cant2="0" pk="1" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+  <Simple name="Bono_OS" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
  </Entity>
- <Entity x="-689" subtype="0" name="Persona" y="-469" width="79" isAssociative="0">
-  <Simple cant1="20" type="integer" pk="1" name="CUIL" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-  <Simple cant1="20" type="integer" pk="0" name="Nombre" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-  <Simple cant1="20" type="integer" pk="0" name="Apellido" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-  <Simple cant1="20" type="integer" pk="0" name="Telefono" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-  <Simple cant1="20" type="integer" pk="0" name="Correo_Electronico" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
- </Entity>
- <Entity x="21" subtype="1" name="Medico" y="131" width="67" isAssociative="0">
-  <Simple cant1="20" type="integer" pk="0" name="Matricula" mult="0" parent="" cant2="0" null="0" sk="1" cant3="2" optionSQL="1"/>
-  <Simple cant1="20" type="integer" pk="0" name="Cupo_Max" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
- </Entity>
- <Entity x="-277" subtype="1" name="Mantenimiento" y="7" width="119" isAssociative="0">
-  <Simple cant1="20" type="integer" pk="0" name="Id_Mantenimiento" mult="0" parent="" cant2="0" null="0" sk="1" cant3="2" optionSQL="1"/>
- </Entity>
- <Entity x="-433" subtype="1" name="Gestion" y="6" width="71" isAssociative="0">
-  <Simple cant1="20" type="integer" pk="0" name="Id_gestion" mult="0" parent="" cant2="0" null="0" sk="1" cant3="2" optionSQL="1"/>
- </Entity>
- <Entity x="-674" subtype="1" name="Personal_Salud" y="-261" width="125" isAssociative="0">
-  <Simple cant1="20" type="integer" pk="0" name="id_personal_salud" mult="0" parent="" cant2="0" null="0" sk="1" cant3="2" optionSQL="1"/>
- </Entity>
- <Entity x="-2" subtype="0" name="Especialidad" y="-275" width="113" isAssociative="0">
-  <Simple cant1="20" type="integer" pk="1" name="ID" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-  <Simple cant1="20" type="integer" pk="0" name="Nombre" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-  <Simple cant1="20" type="integer" pk="0" name="Descripcion" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
- </Entity>
- <Entity x="-687" subtype="0" name="Clinica" y="-27" width="62" isAssociative="0">
-  <Compound pk="1" name="ID_Clinica" mult="0" parent="" null="0" sk="0" amount="2" optionSQL="1">
-   <Simple cant1="20" type="integer" pk="0" name="Codigo_Clinica" mult="0" parent="ID_Clinica" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-   <Simple cant1="20" type="integer" pk="0" name="Codigo_Postal" mult="0" parent="ID_Clinica" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
+ <Entity name="Practica" width="73" y="71" x="-881" subtype="0" isAssociative="0">
+  <Simple name="ID_Practica" null="0" cant2="0" pk="1" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+  <Compound name="Fecha_Practica" null="0" pk="0" parent="" amount="3" optionSQL="1" mult="0" sk="0">
+   <Simple name="Dia_Practica" null="0" cant2="0" pk="0" parent="Fecha_Practica" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+   <Simple name="Mes_Practica" null="0" cant2="0" pk="0" parent="Fecha_Practica" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+   <Simple name="Ano_Practica" null="0" cant2="0" pk="0" parent="Fecha_Practica" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
   </Compound>
  </Entity>
- <Entity x="-1115" subtype="1" name="Paciente" y="-256" width="74" isAssociative="0">
-  <Simple cant1="20" type="integer" pk="0" name="DNI" mult="0" parent="" cant2="0" null="0" sk="1" cant3="2" optionSQL="1"/>
-  <Simple cant1="20" type="integer" pk="0" name="Genero" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-  <Compound pk="0" name="Fecha_nac" mult="0" parent="" null="0" sk="0" amount="3" optionSQL="1">
-   <Simple cant1="20" type="integer" pk="0" name="Dia_nac" mult="0" parent="Fecha_nac" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-   <Simple cant1="20" type="integer" pk="0" name="Mes_Nac" mult="0" parent="Fecha_nac" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-   <Simple cant1="20" type="integer" pk="0" name="Ano_Nac" mult="0" parent="Fecha_nac" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-  </Compound>
-  <Compound pk="0" name="Fecha_Defuncion" mult="0" parent="" null="1" sk="0" amount="3" optionSQL="1">
-   <Simple cant1="20" type="integer" pk="0" name="Dia_def" mult="0" parent="Fecha_Defuncion" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-   <Simple cant1="20" type="integer" pk="0" name="Mes_def" mult="0" parent="Fecha_Defuncion" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-   <Simple cant1="20" type="integer" pk="0" name="Ano_Def" mult="0" parent="Fecha_Defuncion" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-  </Compound>
+ <Entity name="Obra_Social" width="110" y="456" x="-1285" subtype="0" isAssociative="0">
+  <Simple name="Id_OS" null="0" cant2="0" pk="1" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+  <Simple name="Tiempo_Cobro_Prom" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+  <Simple name="Nombre" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
  </Entity>
- <Entity x="-1285" subtype="0" name="Obra_Social" y="456" width="110" isAssociative="0">
-  <Simple cant1="20" type="integer" pk="1" name="Id_OS" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-  <Simple cant1="20" type="integer" pk="0" name="Tiempo_Cobro_Prom" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-  <Simple cant1="20" type="integer" pk="0" name="Nombre" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
- </Entity>
- <Entity x="-881" subtype="0" name="Practica" y="71" width="73" isAssociative="0">
-  <Simple cant1="20" type="integer" pk="1" name="ID_Practica" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-  <Compound pk="0" name="Fecha_Practica" mult="0" parent="" null="0" sk="0" amount="3" optionSQL="1">
-   <Simple cant1="20" type="integer" pk="0" name="Dia_Practica" mult="0" parent="Fecha_Practica" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-   <Simple cant1="20" type="integer" pk="0" name="Mes_Practica" mult="0" parent="Fecha_Practica" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-   <Simple cant1="20" type="integer" pk="0" name="Ano_Practica" mult="0" parent="Fecha_Practica" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
+ <Entity name="Paciente" width="74" y="-256" x="-1115" subtype="1" isAssociative="0">
+  <Simple name="DNI" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="1"/>
+  <Simple name="Genero" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+  <Compound name="Fecha_nac" null="0" pk="0" parent="" amount="3" optionSQL="1" mult="0" sk="0">
+   <Simple name="Dia_nac" null="0" cant2="0" pk="0" parent="Fecha_nac" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+   <Simple name="Mes_Nac" null="0" cant2="0" pk="0" parent="Fecha_nac" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+   <Simple name="Ano_Nac" null="0" cant2="0" pk="0" parent="Fecha_nac" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+  </Compound>
+  <Compound name="Fecha_Defuncion" null="1" pk="0" parent="" amount="3" optionSQL="1" mult="0" sk="0">
+   <Simple name="Dia_def" null="0" cant2="0" pk="0" parent="Fecha_Defuncion" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+   <Simple name="Mes_def" null="0" cant2="0" pk="0" parent="Fecha_Defuncion" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+   <Simple name="Ano_Def" null="0" cant2="0" pk="0" parent="Fecha_Defuncion" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
   </Compound>
  </Entity>
- <Entity x="-1145" subtype="0" name="Atencion" y="345" width="79" isAssociative="0">
-  <Simple cant1="20" type="integer" pk="1" name="ID_Consulta" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
-  <Simple cant1="20" type="integer" pk="0" name="Bono_OS" mult="0" parent="" cant2="0" null="0" sk="0" cant3="2" optionSQL="1"/>
+ <Entity name="Clinica" width="62" y="-27" x="-687" subtype="0" isAssociative="0">
+  <Compound name="ID_Clinica" null="0" pk="1" parent="" amount="2" optionSQL="1" mult="0" sk="0">
+   <Simple name="Codigo_Clinica" null="0" cant2="0" pk="0" parent="ID_Clinica" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+   <Simple name="Codigo_Postal" null="0" cant2="0" pk="0" parent="ID_Clinica" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+  </Compound>
  </Entity>
- <Hierarchy centerY="null" name2="Personal_Salud" name="Hierarchy Persona" name3="Personal_Variable" typeName="Tipo" centerX="null" exclusive="true" total="true" name0="Persona" name1="Paciente" cont="4"/>
- <Hierarchy centerY="null" name2="Mantenimiento" name="Hierarchy Personal_Variable" name3="Medico" typeName="Tipo" centerX="null" exclusive="true" total="true" name0="Personal_Variable" name1="Gestion" cont="4"/>
- <RBinary min0="1" onDelete0="restrict" max0="1" max1="N" name1="Practica" onUpdate1="restrict" rolename="" onDelete1="restrict" width="71" match0="simple" dep="0" firstWeak="0" onUpdate0="restrict" name0="Clinica" name="Coordina" y="-11" match1="simple" x="-872" min1="0"/>
- <RBinary min0="1" onDelete0="restrict" max0="1" max1="N" name1="Atencion" onUpdate1="restrict" rolename="" onDelete1="restrict" width="61" match0="simple" dep="0" firstWeak="0" onUpdate0="restrict" name0="Medico" name="Realiza" y="232" match1="simple" x="-445" min1="0"/>
- <RBinary min0="1" onDelete0="restrict" max0="1" max1="N" name1="Atencion" onUpdate1="restrict" rolename="" onDelete1="restrict" width="58" match0="simple" dep="0" firstWeak="0" onUpdate0="restrict" name0="Paciente" name="Recibe" y="54" match1="simple" x="-1093" min1="0"/>
- <RBinary min0="0" onDelete0="restrict" max0="N" max1="N" name1="Medico" onUpdate1="restrict" rolename="" onDelete1="restrict" width="61" match0="simple" dep="0" firstWeak="0" onUpdate0="restrict" name0="Obra_Social" name="Atiende" y="465" match1="simple" x="49" min1="0"/>
- <RBinary min0="1" onDelete0="restrict" max0="N" max1="N" name1="Clinica" onUpdate1="restrict" rolename="" onDelete1="restrict" width="55" match0="simple" dep="0" firstWeak="0" onUpdate0="restrict" name0="Personal_Variable" name="Ejerce_en" y="-108" match1="simple" x="-447" min1="1"/>
- <RBinary min0="1" onDelete0="restrict" max0="N" max1="1" name1="Clinica" onUpdate1="restrict" rolename="" onDelete1="restrict" width="58" match0="simple" dep="0" firstWeak="0" onUpdate0="restrict" name0="Personal_Salud" name="Trabaja" y="-117" match1="simple" x="-630" min1="1"/>
- <RBinary min0="0" onDelete0="restrict" max0="N" max1="N" name1="Especialidad" onUpdate1="restrict" rolename="" onDelete1="restrict" width="57" match0="simple" dep="0" firstWeak="0" onUpdate0="restrict" name0="Medico" name="Desempeña" y="-65" match1="simple" x="51" min1="1"/>
- <RBinary min0="0" onDelete0="restrict" max0="N" max1="1" name1="Obra_Social" onUpdate1="restrict" rolename="" onDelete1="restrict" width="66" match0="simple" dep="0" firstWeak="0" onUpdate0="restrict" name0="Paciente" name="Asociado" y="52" match1="simple" x="-1230" min1="0"/>
- <RBinary min0="1" onDelete0="restrict" max0="1" max1="1" name1="Practica" onUpdate1="restrict" rolename="" onDelete1="restrict" width="67" match0="simple" dep="0" firstWeak="0" onUpdate0="restrict" name0="Atencion" name="Requiere" y="219" match1="simple" x="-947" min1="0"/>
+ <Entity name="Especialidad" width="113" y="-275" x="-2" subtype="0" isAssociative="0">
+  <Simple name="ID" null="0" cant2="0" pk="1" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+  <Simple name="Nombre" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+  <Simple name="Descripcion" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+ </Entity>
+ <Entity name="Personal_Salud" width="125" y="-261" x="-674" subtype="1" isAssociative="0">
+  <Simple name="id_personal_salud" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="1"/>
+ </Entity>
+ <Entity name="Gestion" width="71" y="6" x="-433" subtype="1" isAssociative="0">
+  <Simple name="Id_gestion" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="1"/>
+ </Entity>
+ <Entity name="Mantenimiento" width="119" y="7" x="-277" subtype="1" isAssociative="0">
+  <Simple name="Id_Mantenimiento" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="1"/>
+ </Entity>
+ <Entity name="Medico" width="67" y="131" x="21" subtype="1" isAssociative="0">
+  <Simple name="Matricula" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="1"/>
+  <Simple name="Cupo_Max" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+ </Entity>
+ <Entity name="Persona" width="79" y="-469" x="-689" subtype="0" isAssociative="0">
+  <Simple name="CUIL" null="0" cant2="0" pk="1" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+  <Simple name="Nombre" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+  <Simple name="Apellido" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+  <Simple name="Telefono" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+  <Simple name="Correo_Electronico" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="0"/>
+ </Entity>
+ <Entity name="Personal_Variable" width="145" y="-244" x="-331" subtype="1" isAssociative="0">
+  <Simple name="Id_personal_variable" null="0" cant2="0" pk="0" parent="" cant3="2" cant1="20" optionSQL="1" type="integer" mult="0" sk="1"/>
+ </Entity>
+ <Hierarchy name="Hierarchy Personal_Variable" name2="Mantenimiento" centerY="null" name1="Gestion" centerX="null" cont="4" name3="Medico" total="true" name0="Personal_Variable" exclusive="true" typeName="Tipo"/>
+ <Hierarchy name="Hierarchy Persona" name2="Personal_Salud" centerY="null" name1="Paciente" centerX="null" cont="4" name3="Personal_Variable" total="true" name0="Persona" exclusive="true" typeName="Tipo"/>
+ <RBinary name="Requiere" match1="simple" onUpdate0="restrict" rolename="" onDelete0="restrict" min0="1" match0="simple" onDelete1="restrict" name0="Atencion" y="219" onUpdate1="restrict" name1="Practica" max0="1" firstWeak="0" x="-947" max1="N" min1="0" width="67" dep="0"/>
+ <RBinary name="Asociado" match1="simple" onUpdate0="restrict" rolename="" onDelete0="restrict" min0="0" match0="simple" onDelete1="restrict" name0="Paciente" y="52" onUpdate1="restrict" name1="Obra_Social" max0="N" firstWeak="0" x="-1230" max1="1" min1="0" width="66" dep="0"/>
+ <RBinary name="Desempe?a" match1="simple" onUpdate0="restrict" rolename="" onDelete0="restrict" min0="0" match0="simple" onDelete1="restrict" name0="Medico" y="-65" onUpdate1="restrict" name1="Especialidad" max0="N" firstWeak="0" x="51" max1="N" min1="1" width="57" dep="0"/>
+ <RBinary name="Trabaja" match1="simple" onUpdate0="restrict" rolename="" onDelete0="restrict" min0="1" match0="simple" onDelete1="restrict" name0="Personal_Salud" y="-117" onUpdate1="restrict" name1="Clinica" max0="N" firstWeak="0" x="-630" max1="1" min1="1" width="58" dep="0"/>
+ <RBinary name="Ejerce_en" match1="simple" onUpdate0="restrict" rolename="" onDelete0="restrict" min0="1" match0="simple" onDelete1="restrict" name0="Personal_Variable" y="-108" onUpdate1="restrict" name1="Clinica" max0="N" firstWeak="0" x="-447" max1="N" min1="1" width="55" dep="0"/>
+ <RBinary name="Atiende" match1="simple" onUpdate0="restrict" rolename="" onDelete0="restrict" min0="0" match0="simple" onDelete1="restrict" name0="Obra_Social" y="465" onUpdate1="restrict" name1="Medico" max0="N" firstWeak="0" x="49" max1="N" min1="0" width="61" dep="0"/>
+ <RBinary name="Recibe" match1="simple" onUpdate0="restrict" rolename="" onDelete0="restrict" min0="1" match0="simple" onDelete1="restrict" name0="Paciente" y="54" onUpdate1="restrict" name1="Atencion" max0="1" firstWeak="0" x="-1093" max1="N" min1="0" width="58" dep="0"/>
+ <RBinary name="Realiza" match1="simple" onUpdate0="restrict" rolename="" onDelete0="restrict" min0="1" match0="simple" onDelete1="restrict" name0="Medico" y="232" onUpdate1="restrict" name1="Atencion" max0="1" firstWeak="0" x="-445" max1="N" min1="0" width="61" dep="0"/>
+ <RBinary name="Coordina" match1="simple" onUpdate0="restrict" rolename="" onDelete0="restrict" min0="1" match0="simple" onDelete1="restrict" name0="Clinica" y="-11" onUpdate1="restrict" name1="Practica" max0="1" firstWeak="0" x="-872" max1="N" min1="0" width="71" dep="0"/>
 </DERExt>
